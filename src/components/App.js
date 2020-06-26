@@ -36,7 +36,7 @@ class App extends Component {
         event.preventDefault()
 
         const url = 'https://api.openweathermap.org/data/2.5/weather?'
-        const appid = 'ccaca0e70f2b1ef5f633bc7b22f9d499'
+        const appid = process.env.REACT_APP_OWKEY
         const units = 'imperial'
         const cityState = this.state.userInput
         fetch(`${url}q=${cityState},US&units=${units}&appid=${appid}`)
